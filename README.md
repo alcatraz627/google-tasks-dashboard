@@ -1,4 +1,9 @@
-# React + TypeScript + Vite
+# Google Tasks Client
+Run with `make run`. [Setup details](https://brianmorrison.me/blog/use-a-makefile-to-run-vite-and-express-at-the-same-time/).
+
+
+
+### ProjectTemplate 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
