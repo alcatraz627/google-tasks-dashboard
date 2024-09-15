@@ -8,11 +8,20 @@ export const Login = ({
   setIsLoggedin: (v: boolean) => void;
 }) => {
   const handleClick = () => {
+    const scope = [
+      "openid",
+      "email",
+      "profile",
+      "https://www.googleapis.com/auth/tasks",
+      "https://www.googleapis.com/auth/tasks.readonly",
+    ].join(" ");
     const callbackUrl = `${window.location.origin}`;
     const googleClientId = ClientKey;
     const targetUrl = `https://accounts.google.com/o/oauth2/auth?redirect_uri=${encodeURIComponent(
       callbackUrl
-    )}&response_type=token&client_id=${googleClientId}&scope=openid%20email%20profile`;
+    )}&response_type=token&client_id=${googleClientId}&scope=${encodeURIComponent(
+      scope
+    )}`;
     window.location.href = targetUrl;
   };
 

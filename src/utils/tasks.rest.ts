@@ -17,8 +17,7 @@ import axios from "axios";
 // const CREDENTIALS_PATH = path.join(process.cwd(), 'credentials.json');
 
 // export const ApiKey = import.meta.env.VITE_GOOGLE_API_KEY;
-export const ClientKey =
-  "825428404042-kp0bulcaibholta72ocvpacc930ribeh.apps.googleusercontent.com";
+export const ClientKey = import.meta.env.VITE_CLIENT_KEY;
 
 export const initAxios = () => {
   //   if (!ApiKey) {

@@ -1,6 +1,7 @@
 import Cookies from "js-cookie";
 import React, { useState } from "react";
 import { Login } from "./Login";
+import { Tasks } from "./Tasks";
 import { User } from "./User";
 
 const Logout = ({ clearLogin }: { clearLogin: () => void }) => {
@@ -22,6 +23,8 @@ export function App() {
         <>
           <User />
           <Logout clearLogin={() => setIsLoggedin(false)} />
+          <hr />
+          <Tasks />
         </>
       ) : (
         <Login setIsLoggedin={setIsLoggedin} />
